@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
-function categorias() {
-    const [data, setData] = useState([{}])
+export default function Categorias() {
+    /*const [data, setData] = useState([{}])
 
     useEffect(() => {
         fetch("/api/categorias").then(
@@ -14,10 +14,8 @@ function categorias() {
             console.log(data)
         }
         )
-    }, [])
+    }, [])*/
     return (
         <div>categorias</div>
     )
 }
-
-export default categorias

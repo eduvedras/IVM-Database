@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -10,13 +10,35 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@layer components {
+  .background-container {
+    @apply flex relative justify-center h-screen w-screen bg-gray-700
+  }
+
+  .button {
+    @apply text-xl rounded-lg p-2.5 border-transparent border-[1px] bg-gray-800 cursor-pointer hover:border-teal-600 
+  }
+}
+
+/*border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;*/
+
+/*
+
 
 a {
   font-weight: 500;
