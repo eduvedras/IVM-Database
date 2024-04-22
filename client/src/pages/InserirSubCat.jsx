@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HomeButton from "../components/HomeButton.jsx";
+import URL from "../components/URL.jsx";
 
 export default function InserirSubCat() {
 	const [category, setCategory] = useState("");
@@ -12,7 +13,8 @@ export default function InserirSubCat() {
 			alert("Preencha os dois campos!");
 		} else {
 			fetch(
-				"/api/categorias/execute_insert_sub?nome=" +
+				URL.url +
+					"/api/categorias/execute_insert_sub?nome=" +
 					category +
 					"," +
 					supercategory

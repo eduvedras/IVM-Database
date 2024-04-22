@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HomeButton from "../components/HomeButton.jsx";
+import URL from "../components/URL.jsx";
 
 export default function InserirCat() {
 	const [category, setCategory] = useState("");
 	const navigate = useNavigate();
 
 	async function insertCategory(category) {
-		fetch("/api/categorias/execute_insert?nome=" + category)
+		fetch(URL.url + "/api/categorias/execute_insert?nome=" + category)
 			.then((res) => {
 				return res.json();
 			})

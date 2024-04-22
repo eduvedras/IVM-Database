@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HomeButton from "../components/HomeButton.jsx";
+import URL from "../components/URL.jsx";
 
 function Row({ tin, nome, handleRemove }) {
 	return (
@@ -24,7 +25,7 @@ export default function Retalhistas() {
 		let ignore = false;
 
 		async function startFetching() {
-			fetch("/api/retalhistas")
+			fetch(URL.url + "/api/retalhistas")
 				.then((res) => res.json())
 				.then((data) => {
 					if (!ignore) {
@@ -52,7 +53,7 @@ export default function Retalhistas() {
 	}, []);
 
 	async function handleRemove(tin) {
-		fetch("/api/retalhistas/remove?tin=" + tin)
+		fetch(URL.url + "/api/retalhistas/remove?tin=" + tin)
 			.then((res) => {
 				return res.json();
 			})

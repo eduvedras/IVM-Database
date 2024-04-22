@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HomeButton from "../components/HomeButton.jsx";
+import URL from "../components/URL.jsx";
 
 function Row({ ean, nro, num_serie, fabricante, instante, unidades, tin }) {
 	return (
@@ -25,7 +26,7 @@ export default function EventosRep() {
 		let ignore = false;
 
 		function startFetching() {
-			fetch("/api/IVM/select?IVM=" + IVM)
+			fetch(URL.url + "/api/IVM/select?IVM=" + IVM)
 				.then((res) => {
 					return res.json();
 				})

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HomeButton from "../components/HomeButton.jsx";
+import URL from "../components/URL.jsx";
 
 export default function InserirRet() {
 	const [tin, setTin] = useState("");
@@ -11,7 +12,13 @@ export default function InserirRet() {
 		if (tin === "" || nome === "") {
 			alert("Preencha os dois campos!");
 		} else {
-			fetch("/api/retalhistas/execute_insert?ret=" + tin + "," + nome)
+			fetch(
+				URL.url +
+					"/api/retalhistas/execute_insert?ret=" +
+					tin +
+					"," +
+					nome
+			)
 				.then((res) => {
 					return res.json();
 				})

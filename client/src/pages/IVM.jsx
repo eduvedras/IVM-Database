@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HomeButton from "../components/HomeButton.jsx";
+import URL from "../components/URL.jsx";
 
 function Row({ serie, fabricante, navigate }) {
 	return (
@@ -27,7 +28,7 @@ export default function IVM() {
 		let ignore = false;
 
 		async function startFetching() {
-			fetch("/api/IVM")
+			fetch(URL.url + "/api/IVM")
 				.then((res) => res.json())
 				.then((data) => {
 					if (!ignore) {

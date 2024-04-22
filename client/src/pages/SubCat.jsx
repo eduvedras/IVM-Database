@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HomeButton from "../components/HomeButton.jsx";
+import URL from "../components/URL.jsx";
 
 function Row({ record }) {
 	return (
@@ -19,7 +20,7 @@ export default function SubCat() {
 		let ignore = false;
 
 		function startFetching() {
-			fetch("/api/categorias/select?cat=" + cat)
+			fetch(URL.url + "/api/categorias/select?cat=" + cat)
 				.then((res) => {
 					return res.json();
 				})
