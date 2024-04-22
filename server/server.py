@@ -4,7 +4,7 @@ import psycopg2
 import psycopg2.extras
 
 ## SGBD configs
-DB_HOST = "dpg-coj6t28l5elc73dj5dfg-a.frankfurt-postgres.render.com"
+DB_HOST = "dpg-coj6t28l5elc73dj5dfg-a"
 DB_USER = "eduvedras"
 DB_DATABASE = "ivm"
 DB_PASSWORD = "7am5RGIfEIHqoCxilMOnJfw89OSBJcSp"
