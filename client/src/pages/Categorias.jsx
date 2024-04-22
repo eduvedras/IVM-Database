@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import HomeButton from "../components/HomeButton.jsx";
+import URL from "../components/URL.jsx";
 
 function Row({ record, handleRemove, navigate }) {
 	return (
@@ -31,7 +32,7 @@ export default function Categorias() {
 		let ignore = false;
 
 		async function startFetching() {
-			fetch("/api/categorias")
+			fetch(URL.url + "/api/categorias")
 				.then((res) => {
 					return res.json();
 				})
@@ -61,7 +62,7 @@ export default function Categorias() {
 	}, []);
 
 	async function handleRemove(record) {
-		fetch("/api/categorias/remove?cat=" + record)
+		fetch(URL.url + "/api/categorias/remove?cat=" + record)
 			.then((res) => {
 				return res.json();
 			})

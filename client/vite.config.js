@@ -12,12 +12,12 @@ export default defineConfig({
 	},
 	server: {
 		port: 8080,
-		proxy: {
+		/*proxy: {
 			"/api": {
 				target: "https://ivm.onrender.com/",
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/api/, "/api"),
 			},
-		},
+		},*/
 	},
 });

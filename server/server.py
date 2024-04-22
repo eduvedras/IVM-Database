@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request, redirect, url_for
+from flask_cors import CORS
 import psycopg2
 import psycopg2.extras
 
@@ -16,6 +17,7 @@ DB_CONNECTION_STRING = "host=%s dbname=%s user=%s password=%s" % (
 )
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/api/categorias")
