@@ -4,6 +4,7 @@ import tailwindcss from "tailwindcss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	base: "/IVM/client/",
 	plugins: [react()],
 	css: {
 		postcss: {
