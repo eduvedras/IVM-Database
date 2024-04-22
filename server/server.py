@@ -4,10 +4,10 @@ import psycopg2
 import psycopg2.extras
 
 ## SGBD configs
-DB_HOST = "127.0.0.1"
-DB_USER = "postgres"
-DB_DATABASE = "testdb"
-DB_PASSWORD = "postgres"
+DB_HOST = "dpg-coj6t28l5elc73dj5dfg-a.frankfurt-postgres.render.com"
+DB_USER = "eduvedras"
+DB_DATABASE = "ivm"
+DB_PASSWORD = "7am5RGIfEIHqoCxilMOnJfw89OSBJcSp"
 DB_CONNECTION_STRING = "host=%s dbname=%s user=%s password=%s" % (
     DB_HOST,
     DB_DATABASE,
